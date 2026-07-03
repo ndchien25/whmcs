@@ -1,0 +1,94 @@
+services:
+  # ===========================================
+  # WHMCS Application (Apache + PHP 8.2)
+  # ===========================================
+  whmcs:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: whmcs-app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - whmcs-network
+
+  # ===========================================
+  # MySQL 8.0 Database
+  # ===========================================
+  db:
+    image: mysql:8.0
+    container_name: whmcs-db
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: whmcs_root_pass
+      MYSQL_DATABASE: whmcs
+      MYSQL_USER: whmcs
+      MYSQL_PASSWORD: whmcs_pass
+    volumes:
+      - whmcs_db_data:/var/lib/mysql
+      - ./docker/mysql.cnf:/etc/mysql/conf.d/whmcs.cnf
+    command: >
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pwhmcs_root_pass"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - whmcs-network
+
+  # ===========================================
+  # phpMyAdmin (Optional - Database Management)
+  # ===========================================
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: whmcs-phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: whmcs_root_pass
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - whmcs-network
+
+  # ===========================================
+  # Mailpit (Email Testing - catches all mail)
+  # ===========================================
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: whmcs-mailpit
+    restart: unless-stopped
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+    networks:
+      - whmcs-network
+
+volumes:
+  whmcs_db_data:
+    driver: local
+
+networks:
+  whmcs-network:
+    driver: bridge

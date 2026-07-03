@@ -1,0 +1,46 @@
+{
+  "name": "twitteroauth",
+  "version": "0.0.0",
+  "description": "The most popular PHP library for use with the Twitter OAuth REST API.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abraham/twitteroauth.git"
+  },
+  "author": "Abraham Williams <abraham@abrah.am>",
+  "homepage": "https://github.com/abraham/twitteroauth#readme",
+  "bugs": {
+    "url": "https://github.com/abraham/twitteroauth/issues"
+  },
+  "scripts": {
+    "fix": "concurrently npm:fix:*",
+    "fix:phpcbf": "./vendor/bin/phpcbf src tests --standard=PSR12",
+    "fix:prettier": "prettier . --write",
+    "fix:rector": "vendor/bin/rector process",
+    "lint": "concurrently npm:lint:*",
+    "lint:phpcs": "./vendor/bin/phpcs src tests --standard=PSR12",
+    "lint:prettier": "prettier . --check",
+    "lint:rector": "vendor/bin/rector process --dry-run",
+    "postinstall": "composer install --no-interaction",
+    "test": "./vendor/bin/phpunit"
+  },
+  "keywords": [
+    "twitter",
+    "api",
+    "oauth",
+    "rest",
+    "social",
+    "twitter-api",
+    "twitter-oauth"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@prettier/plugin-php": "0.19.7",
+    "concurrently": "^8.2.2",
+    "prettier": "2.8.8",
+    "prettier-plugin-package": "1.4.0"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}
