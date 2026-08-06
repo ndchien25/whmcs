@@ -11,6 +11,11 @@ services:
     ports:
       - "8080:80"
     volumes:
+      # Mount development code only; keep vendor on the image for Windows performance.
+      - ./modules:/var/www/html/modules
+      - ./templates:/var/www/html/templates
+      - ./includes:/var/www/html/includes
+      - ./lang:/var/www/html/lang
       - whmcs_templates_c:/var/www/html/templates_c
       - whmcs_attachments:/var/www/html/attachments
       - whmcs_downloads:/var/www/html/downloads
