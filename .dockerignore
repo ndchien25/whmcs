@@ -1,6 +1,5 @@
 # Docker
 docker-compose.yml
-docker/
 .dockerignore
 
 # IDE
@@ -19,6 +18,8 @@ Thumbs.db
 
 # Logs
 *.log
+logs/
+templates_c/
 
 # Environment
 .env

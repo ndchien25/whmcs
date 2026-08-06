@@ -1,1 +1,3 @@
 /templates_c
+/logs/api_traffic.log
+/logs/api_traffic.jsonl

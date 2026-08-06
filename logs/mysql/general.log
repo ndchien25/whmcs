@@ -1,0 +1,649 @@
+2026-08-05T17:12:14.564624Z	 1624 Connect	root@localhost on  using Socket
+2026-08-05T17:12:14.565593Z	 1624 Quit	
+2026-08-05T17:12:14.690796Z	 1625 Connect	whmcs@172.20.0.5 on whmcs using TCP/IP
+2026-08-05T17:12:14.691561Z	 1625 Query	use `whmcs`
+2026-08-05T17:12:14.692710Z	 1625 Prepare	set names 'utf8' collate 'utf8_unicode_ci'
+2026-08-05T17:12:14.692986Z	 1625 Execute	set names 'utf8' collate 'utf8_unicode_ci'
+2026-08-05T17:12:14.693452Z	 1625 Close stmt	
+2026-08-05T17:12:14.693807Z	 1625 Prepare	set session sql_mode=''
+2026-08-05T17:12:14.694095Z	 1625 Execute	set session sql_mode=''
+2026-08-05T17:12:14.694498Z	 1625 Close stmt	
+2026-08-05T17:12:14.703019Z	 1625 Prepare	select * from `tblconfiguration`
+2026-08-05T17:12:14.703415Z	 1625 Execute	select * from `tblconfiguration`
+2026-08-05T17:12:14.705140Z	 1625 Close stmt	
+2026-08-05T17:12:14.707976Z	 1625 Prepare	select * from `tblconfiguration` where `tblconfiguration`.`setting` = ? limit 1
+2026-08-05T17:12:14.708269Z	 1625 Execute	select * from `tblconfiguration` where `tblconfiguration`.`setting` = 'trustedProxyIps' limit 1
+2026-08-05T17:12:14.708767Z	 1625 Close stmt	
+2026-08-05T17:12:14.719634Z	 1625 Prepare	select `data` from `tbltransientdata` where `name` = ? and `expires` > ? limit 1
+2026-08-05T17:12:14.719997Z	 1625 Execute	select `data` from `tbltransientdata` where `name` = 'TemplateCompatCache' and `expires` > 1785949934 limit 1
+2026-08-05T17:12:14.720945Z	 1625 Close stmt	
+2026-08-05T17:12:14.792485Z	 1625 Prepare	select exists(select * from `tbltransientdata` where `name` = ?) as `exists`
+2026-08-05T17:12:14.792863Z	 1625 Execute	select exists(select * from `tbltransientdata` where `name` = 'lastCronMemoryLimit') as `exists`
+2026-08-05T17:12:14.793512Z	 1625 Close stmt	
+2026-08-05T17:12:14.793948Z	 1625 Prepare	update `tbltransientdata` set `data` = ?, `expires` = ? where `name` = ?
+2026-08-05T17:12:14.794270Z	 1625 Execute	update `tbltransientdata` set `data` = '256', `expires` = 1786554734 where `name` = 'lastCronMemoryLimit'
+2026-08-05T17:12:14.803058Z	 1625 Close stmt	
+2026-08-05T17:12:14.818670Z	 1625 Prepare	select * from `tbltask`
+2026-08-05T17:12:14.819043Z	 1625 Execute	select * from `tbltask`
+2026-08-05T17:12:14.820293Z	 1625 Close stmt	
+2026-08-05T17:12:14.835054Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.835435Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.836327Z	 1625 Close stmt	
+2026-08-05T17:12:14.838278Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.838608Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.839174Z	 1625 Close stmt	
+2026-08-05T17:12:14.849454Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.849811Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.850378Z	 1625 Close stmt	
+2026-08-05T17:12:14.850928Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.851241Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.851643Z	 1625 Close stmt	
+2026-08-05T17:12:14.855172Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.855454Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.856014Z	 1625 Close stmt	
+2026-08-05T17:12:14.856449Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.856754Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.857283Z	 1625 Close stmt	
+2026-08-05T17:12:14.860001Z	 1625 Prepare	select * from `tbltask`
+2026-08-05T17:12:14.860299Z	 1625 Execute	select * from `tbltask`
+2026-08-05T17:12:14.860856Z	 1625 Close stmt	
+2026-08-05T17:12:14.863230Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.863587Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.864085Z	 1625 Close stmt	
+2026-08-05T17:12:14.864604Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.864884Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.865334Z	 1625 Close stmt	
+2026-08-05T17:12:14.868694Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.868981Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.869435Z	 1625 Close stmt	
+2026-08-05T17:12:14.869918Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.870197Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.870652Z	 1625 Close stmt	
+2026-08-05T17:12:14.873926Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.874211Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.874669Z	 1625 Close stmt	
+2026-08-05T17:12:14.875053Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.875332Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.875783Z	 1625 Close stmt	
+2026-08-05T17:12:14.879631Z	 1625 Prepare	select * from `tblconfiguration` where `tblconfiguration`.`setting` = ? limit 1
+2026-08-05T17:12:14.879994Z	 1625 Execute	select * from `tblconfiguration` where `tblconfiguration`.`setting` = 'lastCronInvocationTime' limit 1
+2026-08-05T17:12:14.880481Z	 1625 Close stmt	
+2026-08-05T17:12:14.881357Z	 1625 Prepare	update `tblconfiguration` set `value` = ?, `tblconfiguration`.`updated_at` = ? where `setting` = ?
+2026-08-05T17:12:14.881656Z	 1625 Execute	update `tblconfiguration` set `value` = '2026-08-06 00:12:14', `tblconfiguration`.`updated_at` = '2026-08-06 00:12:14' where `setting` = 'lastCronInvocationTime'
+2026-08-05T17:12:14.888063Z	 1625 Close stmt	
+2026-08-05T17:12:14.888597Z	 1625 Prepare	select * from `tblconfiguration` where `tblconfiguration`.`setting` = ? limit 1
+2026-08-05T17:12:14.888881Z	 1625 Execute	select * from `tblconfiguration` where `tblconfiguration`.`setting` = 'cronTimeZone' limit 1
+2026-08-05T17:12:14.889328Z	 1625 Close stmt	
+2026-08-05T17:12:14.900694Z	 1625 Prepare	insert into `tbllog_register` (`namespace`, `namespace_id`, `name`, `namespace_value`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?)
+2026-08-05T17:12:14.901063Z	 1625 Prepare	insert into `tbllog_register` (`namespace`, `namespace_id`, `name`, `namespace_value`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?)
+2026-08-05T17:12:14.901267Z	 1625 Execute	insert into `tbllog_register` (`namespace`, `namespace_id`, `name`, `namespace_value`, `updated_at`, `created_at`) values ('cron.dailyreport', 0, 'Daily Cron Report', '{\"startTime\":\"2026-08-06 00:12:14\",\"tasks\":[],\"finishTime\":\"2026-08-06 00:12:14\"}', '2026-08-06 00:12:14', '2026-08-06 00:12:14')
+2026-08-05T17:12:14.905933Z	 1625 Close stmt	
+2026-08-05T17:12:14.906522Z	 1625 Prepare	select * from `tbltask`
+2026-08-05T17:12:14.906801Z	 1625 Execute	select * from `tbltask`
+2026-08-05T17:12:14.907294Z	 1625 Close stmt	
+2026-08-05T17:12:14.909633Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.909929Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.910365Z	 1625 Close stmt	
+2026-08-05T17:12:14.911028Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.911203Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.911678Z	 1625 Close stmt	
+2026-08-05T17:12:14.916240Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.916482Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.916912Z	 1625 Close stmt	
+2026-08-05T17:12:14.917431Z	 1625 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.917585Z	 1625 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:12:14.917913Z	 1625 Close stmt	
+2026-08-05T17:12:14.922072Z	 1625 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:12:14.922415Z	 1625 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:12:14.922667Z	 1625 Execute	select * from `tbltask_status` where (`task_id` = 19) limit 1
+2026-08-05T17:12:14.923713Z	 1625 Close stmt	
+2026-08-05T17:12:14.925568Z	 1625 Prepare	update `tbltask_status` set `last_run` = ?, `tbltask_status`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:14.925878Z	 1625 Prepare	update `tbltask_status` set `last_run` = ?, `tbltask_status`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:14.926076Z	 1625 Execute	update `tbltask_status` set `last_run` = '2026-08-06 00:12:14', `tbltask_status`.`updated_at` = '2026-08-06 00:12:14' where `id` = 19
+2026-08-05T17:12:14.933913Z	 1625 Close stmt	
+2026-08-05T17:12:14.934857Z	 1625 Prepare	update `tbltask_status` set `in_progress` = ?, `tbltask_status`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:14.935246Z	 1625 Prepare	update `tbltask_status` set `in_progress` = ?, `tbltask_status`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:14.935423Z	 1625 Execute	update `tbltask_status` set `in_progress` = 1, `tbltask_status`.`updated_at` = '2026-08-06 00:12:14' where `id` = 19
+2026-08-05T17:12:14.945330Z	 1625 Close stmt	
+2026-08-05T17:12:14.950715Z	 1625 Prepare	INSERT INTO tblactivitylog (`date`,`description`,`user`,`userid`,`ipaddr`,`user_id`,`admin_id`) VALUES ('20260806001214','Automated Task: Starting Overdue Suspensions','System','0','','0','0')
+2026-08-05T17:12:14.950946Z	 1625 Execute	INSERT INTO tblactivitylog (`date`,`description`,`user`,`userid`,`ipaddr`,`user_id`,`admin_id`) VALUES ('20260806001214','Automated Task: Starting Overdue Suspensions','System','0','','0','0')
+2026-08-05T17:12:14.959779Z	 1625 Prepare	update `tblhosting` set `overideautosuspend` = ?, `tblhosting`.`updated_at` = ? where `overideautosuspend` = ? and `overidesuspenduntil` < ? and `overidesuspenduntil` != ?
+2026-08-05T17:12:14.960011Z	 1625 Execute	update `tblhosting` set `overideautosuspend` = '', `tblhosting`.`updated_at` = '2026-08-06 00:12:14' where `overideautosuspend` = '1' and `overidesuspenduntil` < '2026-08-06' and `overidesuspenduntil` != '0000-00-00'
+2026-08-05T17:12:14.960522Z	 1625 Close stmt	
+2026-08-05T17:12:14.961556Z	 1625 Prepare	select `susptermexempt`, `id` from `tblclientgroups`
+2026-08-05T17:12:14.961743Z	 1625 Execute	select `susptermexempt`, `id` from `tblclientgroups`
+2026-08-05T17:12:14.962256Z	 1625 Close stmt	
+2026-08-05T17:12:14.963007Z	 1625 Prepare	SELECT * FROM tblhosting WHERE domainstatus = 'Active' AND billingcycle != 'Free Account' AND billingcycle != 'Free' AND billingcycle != 'One Time' AND overideautosuspend != '1' AND nextduedate <= '2026-08-01' ORDER BY domain ASC
+2026-08-05T17:12:14.963215Z	 1625 Execute	SELECT * FROM tblhosting WHERE domainstatus = 'Active' AND billingcycle != 'Free Account' AND billingcycle != 'Free' AND billingcycle != 'One Time' AND overideautosuspend != '1' AND nextduedate <= '2026-08-01' ORDER BY domain ASC
+2026-08-05T17:12:14.964453Z	 1625 Close stmt	
+2026-08-05T17:12:14.966135Z	 1625 Prepare	select `firstname`, `lastname`, `groupid` from `tblclients` where `id` = ? limit 1
+2026-08-05T17:12:14.966314Z	 1625 Execute	select `firstname`, `lastname`, `groupid` from `tblclients` where `id` = 2 limit 1
+2026-08-05T17:12:14.966768Z	 1625 Close stmt	
+2026-08-05T17:12:14.967929Z	 1625 Prepare	SELECT tblproducts.name, tblproducts.servertype, tblhosting.nextduedate FROM tblproducts INNER JOIN tblhosting on tblproducts.id = tblhosting.packageid WHERE `tblproducts`.`id`='1' AND `tblhosting`.`id`='8'
+2026-08-05T17:12:14.968101Z	 1625 Execute	SELECT tblproducts.name, tblproducts.servertype, tblhosting.nextduedate FROM tblproducts INNER JOIN tblhosting on tblproducts.id = tblhosting.packageid WHERE `tblproducts`.`id`='1' AND `tblhosting`.`id`='8'
+2026-08-05T17:12:14.972739Z	 1625 Prepare	select * from `tblinvoiceitems` where `type` = ? and `relid` = ? order by `id` desc limit 1
+2026-08-05T17:12:14.972973Z	 1625 Execute	select * from `tblinvoiceitems` where `type` = 'Hosting' and `relid` = 8 order by `id` desc limit 1
+2026-08-05T17:12:14.973439Z	 1625 Close stmt	
+2026-08-05T17:12:14.978255Z	 1625 Prepare	select * from `tblinvoices` where `tblinvoices`.`id` in (23) and `status` = ?
+2026-08-05T17:12:14.978455Z	 1625 Execute	select * from `tblinvoices` where `tblinvoices`.`id` in (23) and `status` = 'Payment Pending'
+2026-08-05T17:12:14.979326Z	 1625 Close stmt	
+2026-08-05T17:12:14.981079Z	 1625 Prepare	INSERT INTO tblactivitylog (`date`,`description`,`user`,`userid`,`ipaddr`,`user_id`,`admin_id`) VALUES ('20260806001214','Cron Job: Suspending Service - Service ID: 8','System','0','','0','0')
+2026-08-05T17:12:14.981406Z	 1625 Execute	INSERT INTO tblactivitylog (`date`,`description`,`user`,`userid`,`ipaddr`,`user_id`,`admin_id`) VALUES ('20260806001214','Cron Job: Suspending Service - Service ID: 8','System','0','','0','0')
+2026-08-05T17:12:14.987728Z	 1625 Prepare	select * from `tblhosting` where `tblhosting`.`id` = ? limit 1
+2026-08-05T17:12:14.987948Z	 1625 Execute	select * from `tblhosting` where `tblhosting`.`id` = 8 limit 1
+2026-08-05T17:12:14.988764Z	 1625 Close stmt	
+2026-08-05T17:12:14.993121Z	 1625 Prepare	select * from `tblproducts` where `tblproducts`.`id` in (1) order by `tblproducts`.`order` asc, `tblproducts`.`id` asc
+2026-08-05T17:12:14.993356Z	 1625 Execute	select * from `tblproducts` where `tblproducts`.`id` in (1) order by `tblproducts`.`order` asc, `tblproducts`.`id` asc
+2026-08-05T17:12:14.993892Z	 1625 Close stmt	
+2026-08-05T17:12:14.998083Z	 1625 Prepare	select * from `tblclients` where `tblclients`.`id` in (2)
+2026-08-05T17:12:14.998315Z	 1625 Execute	select * from `tblclients` where `tblclients`.`id` in (2)
+2026-08-05T17:12:14.998787Z	 1625 Close stmt	
+2026-08-05T17:12:15.003832Z	 1625 Prepare	select * from `tblcustomfieldsvalues` where `tblcustomfieldsvalues`.`relid` = ? and `tblcustomfieldsvalues`.`relid` is not null
+2026-08-05T17:12:15.004044Z	 1625 Execute	select * from `tblcustomfieldsvalues` where `tblcustomfieldsvalues`.`relid` = 8 and `tblcustomfieldsvalues`.`relid` is not null
+2026-08-05T17:12:15.004690Z	 1625 Close stmt	
+2026-08-05T17:12:15.006325Z	 1625 Prepare	select `fieldname` from `tblcustomfields` where `type` = ? and `relid` = ? order by `tblcustomfields`.`sortorder` asc, `tblcustomfields`.`id` asc
+2026-08-05T17:12:15.006505Z	 1625 Execute	select `fieldname` from `tblcustomfields` where `type` = 'product' and `relid` = 1 order by `tblcustomfields`.`sortorder` asc, `tblcustomfields`.`id` asc
+2026-08-05T17:12:15.007000Z	 1625 Close stmt	
+2026-08-05T17:12:15.008950Z	 1625 Prepare	select `tblproductconfigoptions`.`optionname` as `productConfigOptionName`, `tblproductconfigoptions`.`optiontype`, `tblproductconfigoptionssub`.`optionname`, `tblhostingconfigoptions`.`qty` from `tblproductconfigoptions` inner join `tblhostingconfigoptions` on `tblproductconfigoptions`.`id` = `tblhostingconfigoptions`.`configid` inner join `tblproductconfigoptionssub` on `tblproductconfigoptionssub`.`id` = `tblhostingconfigoptions`.`optionid` inner join `tblproductconfiglinks` on `tblproductconfiglinks`.`gid` = `tblproductconfigoptions`.`gid` where `tblhostingconfigoptions`.`relid` = ? and `tblproductconfiglinks`.`pid` = ?
+2026-08-05T17:12:15.009151Z	 1625 Execute	select `tblproductconfigoptions`.`optionname` as `productConfigOptionName`, `tblproductconfigoptions`.`optiontype`, `tblproductconfigoptionssub`.`optionname`, `tblhostingconfigoptions`.`qty` from `tblproductconfigoptions` inner join `tblhostingconfigoptions` on `tblproductconfigoptions`.`id` = `tblhostingconfigoptions`.`configid` inner join `tblproductconfigoptionssub` on `tblproductconfigoptionssub`.`id` = `tblhostingconfigoptions`.`optionid` inner join `tblproductconfiglinks` on `tblproductconfiglinks`.`gid` = `tblproductconfigoptions`.`gid` where `tblhostingconfigoptions`.`relid` = 8 and `tblproductconfiglinks`.`pid` = 1
+2026-08-05T17:12:15.011635Z	 1625 Close stmt	
+2026-08-05T17:12:15.013600Z	 1625 Prepare	select * from `tblservers` where `tblservers`.`id` = ? order by `tblservers`.`name` asc limit 1
+2026-08-05T17:12:15.014190Z	 1625 Execute	select * from `tblservers` where `tblservers`.`id` = 0 order by `tblservers`.`name` asc limit 1
+2026-08-05T17:12:15.015122Z	 1625 Close stmt	
+2026-08-05T17:12:15.022794Z	 1625 Prepare	select `tblusers`.*, `tblusers_clients`.`client_id` as `pivot_client_id`, `tblusers_clients`.`auth_user_id` as `pivot_auth_user_id`, `tblusers_clients`.`created_at` as `pivot_created_at`, `tblusers_clients`.`updated_at` as `pivot_updated_at`, `tblusers_clients`.`owner` as `pivot_owner`, `tblusers_clients`.`permissions` as `pivot_permissions`, `tblusers_clients`.`last_login` as `pivot_last_login` from `tblusers` inner join `tblusers_clients` on `tblusers`.`id` = `tblusers_clients`.`auth_user_id` where `tblusers_clients`.`client_id` = ? and `owner` = ? limit 1
+2026-08-05T17:12:15.023179Z	 1625 Prepare	select `tblusers`.*, `tblusers_clients`.`client_id` as `pivot_client_id`, `tblusers_clients`.`auth_user_id` as `pivot_auth_user_id`, `tblusers_clients`.`created_at` as `pivot_created_at`, `tblusers_clients`.`updated_at` as `pivot_updated_at`, `tblusers_clients`.`owner` as `pivot_owner`, `tblusers_clients`.`permissions` as `pivot_permissions`, `tblusers_clients`.`last_login` as `pivot_last_login` from `tblusers` inner join `tblusers_clients` on `tblusers`.`id` = `tblusers_clients`.`auth_user_id` where `tblusers_clients`.`client_id` = ? and `owner` = ? limit 1
+2026-08-05T17:12:15.023328Z	 1625 Execute	select `tblusers`.*, `tblusers_clients`.`client_id` as `pivot_client_id`, `tblusers_clients`.`auth_user_id` as `pivot_auth_user_id`, `tblusers_clients`.`created_at` as `pivot_created_at`, `tblusers_clients`.`updated_at` as `pivot_updated_at`, `tblusers_clients`.`owner` as `pivot_owner`, `tblusers_clients`.`permissions` as `pivot_permissions`, `tblusers_clients`.`last_login` as `pivot_last_login` from `tblusers` inner join `tblusers_clients` on `tblusers`.`id` = `tblusers_clients`.`auth_user_id` where `tblusers_clients`.`client_id` = 2 and `owner` = 1 limit 1
+2026-08-05T17:12:15.023942Z	 1625 Close stmt	
+2026-08-05T17:12:15.026877Z	 1625 Prepare	select * from `tblclients` where `tblclients`.`id` = ? limit 1
+2026-08-05T17:12:15.027085Z	 1625 Execute	select * from `tblclients` where `tblclients`.`id` = 2 limit 1
+2026-08-05T17:12:15.027548Z	 1625 Close stmt	
+2026-08-05T17:12:15.031970Z	 1625 Prepare	select * from `tblpaymethods` where `tblpaymethods`.`userid` = ? and `tblpaymethods`.`userid` is not null and `tblpaymethods`.`deleted_at` is null order by `order_preference` asc
+2026-08-05T17:12:15.032242Z	 1625 Execute	select * from `tblpaymethods` where `tblpaymethods`.`userid` = 2 and `tblpaymethods`.`userid` is not null and `tblpaymethods`.`deleted_at` is null order by `order_preference` asc
+2026-08-05T17:12:15.032907Z	 1625 Close stmt	
+2026-08-05T17:12:15.037542Z	 1625 Prepare	select * from `tblcreditcards` where `tblcreditcards`.`id` = ? limit 1
+2026-08-05T17:12:15.037855Z	 1625 Prepare	select * from `tblcreditcards` where `tblcreditcards`.`id` = ? limit 1
+2026-08-05T17:12:15.038007Z	 1625 Execute	select * from `tblcreditcards` where `tblcreditcards`.`id` = 1 limit 1
+2026-08-05T17:12:15.038404Z	 1625 Close stmt	
+2026-08-05T17:12:15.038964Z	 1625 Prepare	select * from `tblcreditcards` where `tblcreditcards`.`id` = ? limit 1
+2026-08-05T17:12:15.039178Z	 1625 Prepare	select * from `tblcreditcards` where `tblcreditcards`.`id` = ? limit 1
+2026-08-05T17:12:15.039322Z	 1625 Execute	select * from `tblcreditcards` where `tblcreditcards`.`id` = 2 limit 1
+2026-08-05T17:12:15.039644Z	 1625 Close stmt	
+2026-08-05T17:12:15.044936Z	 1625 Prepare	select * from `tblpaymentgateways` where `gateway` = ?
+2026-08-05T17:12:15.045191Z	 1625 Execute	select * from `tblpaymentgateways` where `gateway` = 'stripe'
+2026-08-05T17:12:15.046458Z	 1625 Close stmt	
+2026-08-05T17:12:15.053728Z	 1625 Prepare	select * from `tblpaymethods` where `tblpaymethods`.`payment_type` = ? and `tblpaymethods`.`payment_id` = ? and `tblpaymethods`.`payment_id` is not null and `tblpaymethods`.`deleted_at` is null order by `order_preference` asc limit 1
+2026-08-05T17:12:15.054196Z	 1625 Execute	select * from `tblpaymethods` where `tblpaymethods`.`payment_type` = 'RemoteCreditCard' and `tblpaymethods`.`payment_id` = 1 and `tblpaymethods`.`payment_id` is not null and `tblpaymethods`.`deleted_at` is null order by `order_preference` asc limit 1
+2026-08-05T17:12:15.054731Z	 1625 Close stmt	
+2026-08-05T17:12:15.055159Z	 1625 Prepare	select * from `tblclients` where `tblclients`.`id` = ? limit 1
+2026-08-05T17:12:15.055351Z	 1625 Execute	select * from `tblclients` where `tblclients`.`id` = 2 limit 1
+2026-08-05T17:12:15.055777Z	 1625 Close stmt	
+2026-08-05T17:12:15.057256Z	 1625 Prepare	select * from `tblusers_clients` where `tblusers_clients`.`client_id` = ? and `tblusers_clients`.`client_id` is not null order by `last_login` desc, `tblusers_clients`.`owner` asc, `tblusers_clients`.`id` asc limit 1
+2026-08-05T17:12:15.057505Z	 1625 Prepare	select * from `tblusers_clients` where `tblusers_clients`.`client_id` = ? and `tblusers_clients`.`client_id` is not null order by `last_login` desc, `tblusers_clients`.`owner` asc, `tblusers_clients`.`id` asc limit 1
+2026-08-05T17:12:15.057694Z	 1625 Execute	select * from `tblusers_clients` where `tblusers_clients`.`client_id` = 2 and `tblusers_clients`.`client_id` is not null order by `last_login` desc, `tblusers_clients`.`owner` asc, `tblusers_clients`.`id` asc limit 1
+2026-08-05T17:12:15.058100Z	 1625 Close stmt	
+2026-08-05T17:12:15.058897Z	 1625 Prepare	select * from `tblusers` where `tblusers`.`id` = ? and `tblusers`.`id` is not null order by `tblusers`.`id` asc limit 1
+2026-08-05T17:12:15.059093Z	 1625 Prepare	select * from `tblusers` where `tblusers`.`id` = ? and `tblusers`.`id` is not null order by `tblusers`.`id` asc limit 1
+2026-08-05T17:12:15.059227Z	 1625 Execute	select * from `tblusers` where `tblusers`.`id` = 2 and `tblusers`.`id` is not null order by `tblusers`.`id` asc limit 1
+2026-08-05T17:12:15.059625Z	 1625 Close stmt	
+2026-08-05T17:12:15.060445Z	 1625 Prepare	select * from `tblcustomfields` where `type` = ? and `relid` = ? order by `tblcustomfields`.`sortorder` asc, `tblcustomfields`.`id` asc
+2026-08-05T17:12:15.060599Z	 1625 Execute	select * from `tblcustomfields` where `type` = 'client' and `relid` = 0 order by `tblcustomfields`.`sortorder` asc, `tblcustomfields`.`id` asc
+2026-08-05T17:12:15.060954Z	 1625 Close stmt	
+2026-08-05T17:12:15.062412Z	 1625 Prepare	select * from `tblservers` where `tblservers`.`id` = ? order by `tblservers`.`name` asc limit 1
+2026-08-05T17:12:15.062747Z	 1625 Execute	select * from `tblservers` where `tblservers`.`id` = 0 order by `tblservers`.`name` asc limit 1
+2026-08-05T17:12:15.063197Z	 1625 Close stmt	
+2026-08-05T17:12:15.063740Z	 1625 Prepare	INSERT INTO tblactivitylog (`date`,`description`,`user`,`userid`,`ipaddr`,`user_id`,`admin_id`) VALUES ('20260806001215','Module Suspend Failed - Service ID: 8 - Error: Function Not Supported by Module','System','2','','0','0')
+2026-08-05T17:12:15.063918Z	 1625 Execute	INSERT INTO tblactivitylog (`date`,`description`,`user`,`userid`,`ipaddr`,`user_id`,`admin_id`) VALUES ('20260806001215','Module Suspend Failed - Service ID: 8 - Error: Function Not Supported by Module','System','2','','0','0')
+2026-08-05T17:12:15.067549Z	 1625 Close stmt	
+2026-08-05T17:12:15.067965Z	 1625 Prepare	INSERT INTO tblactivitylog (`date`,`description`,`user`,`userid`,`ipaddr`,`user_id`,`admin_id`) VALUES ('20260806001215','Cron Job: ERROR: Manual Suspension Required - Function Not Supported by Module - ssl - nd chien (Service ID: 8 - User ID: 2)','System','0','','0','0')
+2026-08-05T17:12:15.068138Z	 1625 Execute	INSERT INTO tblactivitylog (`date`,`description`,`user`,`userid`,`ipaddr`,`user_id`,`admin_id`) VALUES ('20260806001215','Cron Job: ERROR: Manual Suspension Required - Function Not Supported by Module - ssl - nd chien (Service ID: 8 - User ID: 2)','System','0','','0','0')
+2026-08-05T17:12:15.070816Z	 1625 Close stmt	
+2026-08-05T17:12:15.073015Z	 1625 Prepare	select * from `tblhostingaddons` where exists (select * from `tblhosting` where `tblhostingaddons`.`hostingid` = `tblhosting`.`id` and `overideautosuspend` != ?) and `status` = ? and `billingcycle` not in (?, ?, ?, ?) and `nextduedate` <= ?
+2026-08-05T17:12:15.073231Z	 1625 Execute	select * from `tblhostingaddons` where exists (select * from `tblhosting` where `tblhostingaddons`.`hostingid` = `tblhosting`.`id` and `overideautosuspend` != 1) and `status` = 'Active' and `billingcycle` not in ('Free', 'Free Account', 'One Time', 'onetime') and `nextduedate` <= '2026-08-01'
+2026-08-05T17:12:15.073781Z	 1625 Close stmt	
+2026-08-05T17:12:15.074308Z	 1625 Prepare	insert into `tbllog_register` (`namespace`, `name`, `namespace_id`, `namespace_value`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?)
+2026-08-05T17:12:15.074477Z	 1625 Prepare	insert into `tbllog_register` (`namespace`, `name`, `namespace_id`, `namespace_value`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?)
+2026-08-05T17:12:15.074601Z	 1625 Execute	insert into `tbllog_register` (`namespace`, `name`, `namespace_id`, `namespace_value`, `updated_at`, `created_at`) values ('AutoSuspensions.suspended', 'Overdue Suspended', 19, 0, '2026-08-06 00:12:15', '2026-08-06 00:12:15')
+2026-08-05T17:12:15.077929Z	 1625 Close stmt	
+2026-08-05T17:12:15.078336Z	 1625 Prepare	insert into `tbllog_register` (`namespace`, `name`, `namespace_id`, `namespace_value`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?)
+2026-08-05T17:12:15.078508Z	 1625 Prepare	insert into `tbllog_register` (`namespace`, `name`, `namespace_id`, `namespace_value`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?)
+2026-08-05T17:12:15.078662Z	 1625 Execute	insert into `tbllog_register` (`namespace`, `name`, `namespace_id`, `namespace_value`, `updated_at`, `created_at`) values ('AutoSuspensions.manual', 'Manual Suspension Required', 19, 1, '2026-08-06 00:12:15', '2026-08-06 00:12:15')
+2026-08-05T17:12:15.082020Z	 1625 Close stmt	
+2026-08-05T17:12:15.082469Z	 1625 Prepare	insert into `tbllog_register` (`namespace`, `name`, `namespace_id`, `namespace_value`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?)
+2026-08-05T17:12:15.082653Z	 1625 Prepare	insert into `tbllog_register` (`namespace`, `name`, `namespace_id`, `namespace_value`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?)
+2026-08-05T17:12:15.082777Z	 1625 Execute	insert into `tbllog_register` (`namespace`, `name`, `namespace_id`, `namespace_value`, `updated_at`, `created_at`) values ('AutoSuspensions.action.detail', 'Action Detail', 19, '{\"success\":[],\"failure\":[[\"service\",8,\"Function Not Supported by Module\"]]}', '2026-08-06 00:12:15', '2026-08-06 00:12:15')
+2026-08-05T17:12:15.086072Z	 1625 Close stmt	
+2026-08-05T17:12:15.086235Z	 1625 Close stmt	
+2026-08-05T17:12:15.086385Z	 1625 Close stmt	
+2026-08-05T17:12:15.086603Z	 1625 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:12:15.086767Z	 1625 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:12:15.086892Z	 1625 Execute	select * from `tbltask_status` where (`task_id` = 19) limit 1
+2026-08-05T17:12:15.087189Z	 1625 Close stmt	
+2026-08-05T17:12:15.087761Z	 1625 Prepare	update `tbltask_status` set `in_progress` = ?, `tbltask_status`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:15.087939Z	 1625 Prepare	update `tbltask_status` set `in_progress` = ?, `tbltask_status`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:15.088064Z	 1625 Execute	update `tbltask_status` set `in_progress` = 0, `tbltask_status`.`updated_at` = '2026-08-06 00:12:15' where `id` = 19
+2026-08-05T17:12:15.091538Z	 1625 Close stmt	
+2026-08-05T17:12:15.092147Z	 1625 Prepare	select * from `tbllog_register` where `created_at` >= ? and `namespace` in (?, ?, ?) and `namespace_id` = ? order by `created_at` asc, `id` asc
+2026-08-05T17:12:15.092342Z	 1625 Prepare	select * from `tbllog_register` where `created_at` >= ? and `namespace` in (?, ?, ?) and `namespace_id` = ? order by `created_at` asc, `id` asc
+2026-08-05T17:12:15.092468Z	 1625 Execute	select * from `tbllog_register` where `created_at` >= '2026-08-06 00:12:14' and `namespace` in ('AutoSuspensions.suspended', 'AutoSuspensions.manual', 'AutoSuspensions.action.detail') and `namespace_id` = 19 order by `created_at` asc, `id` asc
+2026-08-05T17:12:15.092873Z	 1625 Close stmt	
+2026-08-05T17:12:15.093361Z	 1625 Prepare	update `tbllog_register` set `namespace_value` = ?, `tbllog_register`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:15.093521Z	 1625 Prepare	update `tbllog_register` set `namespace_value` = ?, `tbllog_register`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:15.093643Z	 1625 Execute	update `tbllog_register` set `namespace_value` = '{\"startTime\":\"2026-08-06 00:12:14\",\"tasks\":[{\"id\":19,\"name\":\"Overdue Suspensions\",\"output_ids\":[1410,1411,1412],\"completed\":true}],\"finishTime\":\"2026-08-06 00:12:14\"}', `tbllog_register`.`updated_at` = '2026-08-06 00:12:15' where `id` = 1409
+2026-08-05T17:12:15.097394Z	 1625 Close stmt	
+2026-08-05T17:12:15.097977Z	 1625 Prepare	update `tbllog_register` set `namespace_value` = ?, `tbllog_register`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:15.098178Z	 1625 Prepare	update `tbllog_register` set `namespace_value` = ?, `tbllog_register`.`updated_at` = ? where `id` = ?
+2026-08-05T17:12:15.098334Z	 1625 Execute	update `tbllog_register` set `namespace_value` = '{\"startTime\":\"2026-08-06 00:12:14\",\"tasks\":[{\"id\":19,\"name\":\"Overdue Suspensions\",\"output_ids\":[1410,1411,1412],\"completed\":true}],\"finishTime\":\"2026-08-06 00:12:15\"}', `tbllog_register`.`updated_at` = '2026-08-06 00:12:15' where `id` = 1409
+2026-08-05T17:12:15.102207Z	 1625 Close stmt	
+2026-08-05T17:12:15.102757Z	 1625 Prepare	select * from `tbltask` where `tbltask`.`id` = ? limit 1
+2026-08-05T17:12:15.102969Z	 1625 Prepare	select * from `tbltask` where `tbltask`.`id` = ? limit 1
+2026-08-05T17:12:15.103131Z	 1625 Execute	select * from `tbltask` where `tbltask`.`id` = 19 limit 1
+2026-08-05T17:12:15.103737Z	 1625 Close stmt	
+2026-08-05T17:12:15.104348Z	 1625 Prepare	select * from `tbltask` where `tbltask`.`id` = ? limit 1
+2026-08-05T17:12:15.104545Z	 1625 Prepare	select * from `tbltask` where `tbltask`.`id` = ? limit 1
+2026-08-05T17:12:15.104712Z	 1625 Execute	select * from `tbltask` where `tbltask`.`id` = 19 limit 1
+2026-08-05T17:12:15.105037Z	 1625 Close stmt	
+2026-08-05T17:12:15.105482Z	 1625 Prepare	select * from `tbllog_register` where `id` = ? limit 1
+2026-08-05T17:12:15.105664Z	 1625 Prepare	select * from `tbllog_register` where `id` = ? limit 1
+2026-08-05T17:12:15.105837Z	 1625 Execute	select * from `tbllog_register` where `id` = 1410 limit 1
+2026-08-05T17:12:15.106123Z	 1625 Close stmt	
+2026-08-05T17:12:15.106373Z	 1625 Prepare	select * from `tbllog_register` where `id` = ? limit 1
+2026-08-05T17:12:15.106556Z	 1625 Prepare	select * from `tbllog_register` where `id` = ? limit 1
+2026-08-05T17:12:15.106722Z	 1625 Execute	select * from `tbllog_register` where `id` = 1411 limit 1
+2026-08-05T17:12:15.106994Z	 1625 Close stmt	
+2026-08-05T17:12:15.107223Z	 1625 Prepare	select * from `tbllog_register` where `id` = ? limit 1
+2026-08-05T17:12:15.107382Z	 1625 Prepare	select * from `tbllog_register` where `id` = ? limit 1
+2026-08-05T17:12:15.107497Z	 1625 Execute	select * from `tbllog_register` where `id` = 1412 limit 1
+2026-08-05T17:12:15.107745Z	 1625 Close stmt	
+2026-08-05T17:12:15.110653Z	 1625 Prepare	select count(*) as aggregate from `tblmodulequeue` where `completed` = ?
+2026-08-05T17:12:15.110872Z	 1625 Execute	select count(*) as aggregate from `tblmodulequeue` where `completed` = 0
+2026-08-05T17:12:15.111289Z	 1625 Close stmt	
+2026-08-05T17:12:15.114369Z	 1625 Prepare	SELECT firstname,lastname,email,ticketnotifications FROM tbladmins INNER JOIN tbladminroles ON tbladminroles.id=tbladmins.roleid WHERE tbladmins.disabled=0 AND tbladminroles.systememails='1'
+2026-08-05T17:12:15.114671Z	 1625 Execute	SELECT firstname,lastname,email,ticketnotifications FROM tbladmins INNER JOIN tbladminroles ON tbladminroles.id=tbladmins.roleid WHERE tbladmins.disabled=0 AND tbladminroles.systememails='1'
+2026-08-05T17:12:15.115606Z	 1625 Close stmt	
+2026-08-05T17:12:15.143991Z	 1625 Prepare	select count(*) as aggregate from `tblerrorlog`
+2026-08-05T17:12:15.144327Z	 1625 Execute	select count(*) as aggregate from `tblerrorlog`
+2026-08-05T17:12:15.146847Z	 1625 Close stmt	
+2026-08-05T17:12:15.147298Z	 1625 Prepare	delete from `tblerrorlog` where `created_at` < ?
+2026-08-05T17:12:15.147557Z	 1625 Execute	delete from `tblerrorlog` where `created_at` < '2026-07-30 00:12:15'
+2026-08-05T17:12:15.148355Z	 1625 Close stmt	
+2026-08-05T17:12:15.150100Z	 1625 Close stmt	
+2026-08-05T17:12:15.150352Z	 1625 Quit	
+2026-08-05T17:12:24.607134Z	 1626 Connect	root@localhost on  using Socket
+2026-08-05T17:12:24.608319Z	 1626 Quit	
+2026-08-05T17:12:34.658073Z	 1627 Connect	root@localhost on  using Socket
+2026-08-05T17:12:34.659128Z	 1627 Quit	
+2026-08-05T17:12:44.702627Z	 1628 Connect	root@localhost on  using Socket
+2026-08-05T17:12:44.703465Z	 1628 Quit	
+2026-08-05T17:12:54.748271Z	 1629 Connect	root@localhost on  using Socket
+2026-08-05T17:12:54.749585Z	 1629 Quit	
+2026-08-05T17:13:04.796914Z	 1630 Connect	root@localhost on  using Socket
+2026-08-05T17:13:04.797732Z	 1630 Quit	
+2026-08-05T17:13:14.843006Z	 1631 Connect	root@localhost on  using Socket
+2026-08-05T17:13:14.844150Z	 1631 Quit	
+2026-08-05T17:13:24.890897Z	 1632 Connect	root@localhost on  using Socket
+2026-08-05T17:13:24.892570Z	 1632 Quit	
+2026-08-05T17:13:34.940815Z	 1633 Connect	root@localhost on  using Socket
+2026-08-05T17:13:34.941859Z	 1633 Quit	
+2026-08-05T17:13:44.997403Z	 1634 Connect	root@localhost on  using Socket
+2026-08-05T17:13:44.998994Z	 1634 Quit	
+2026-08-05T17:13:55.055734Z	 1635 Connect	root@localhost on  using Socket
+2026-08-05T17:13:55.056792Z	 1635 Quit	
+2026-08-05T17:14:05.106069Z	 1636 Connect	root@localhost on  using Socket
+2026-08-05T17:14:05.107286Z	 1636 Quit	
+2026-08-05T17:14:15.155871Z	 1637 Connect	root@localhost on  using Socket
+2026-08-05T17:14:15.156878Z	 1637 Quit	
+2026-08-05T17:14:25.201390Z	 1638 Connect	root@localhost on  using Socket
+2026-08-05T17:14:25.202290Z	 1638 Quit	
+2026-08-05T17:14:35.248210Z	 1639 Connect	root@localhost on  using Socket
+2026-08-05T17:14:35.249176Z	 1639 Quit	
+2026-08-05T17:14:45.299294Z	 1640 Connect	root@localhost on  using Socket
+2026-08-05T17:14:45.300320Z	 1640 Quit	
+2026-08-05T17:14:55.370823Z	 1641 Connect	root@localhost on  using Socket
+2026-08-05T17:14:55.371758Z	 1641 Quit	
+2026-08-05T17:15:01.771769Z	 1642 Connect	whmcs@172.20.0.5 on whmcs using TCP/IP
+2026-08-05T17:15:01.772767Z	 1642 Query	use `whmcs`
+2026-08-05T17:15:01.774264Z	 1642 Prepare	set names 'utf8' collate 'utf8_unicode_ci'
+2026-08-05T17:15:01.774571Z	 1642 Execute	set names 'utf8' collate 'utf8_unicode_ci'
+2026-08-05T17:15:01.775050Z	 1642 Close stmt	
+2026-08-05T17:15:01.775502Z	 1642 Prepare	set session sql_mode=''
+2026-08-05T17:15:01.775814Z	 1642 Execute	set session sql_mode=''
+2026-08-05T17:15:01.776211Z	 1642 Close stmt	
+2026-08-05T17:15:01.784900Z	 1642 Prepare	select * from `tblconfiguration`
+2026-08-05T17:15:01.785298Z	 1642 Execute	select * from `tblconfiguration`
+2026-08-05T17:15:01.787412Z	 1642 Close stmt	
+2026-08-05T17:15:01.790137Z	 1642 Prepare	select * from `tblconfiguration` where `tblconfiguration`.`setting` = ? limit 1
+2026-08-05T17:15:01.790469Z	 1642 Execute	select * from `tblconfiguration` where `tblconfiguration`.`setting` = 'trustedProxyIps' limit 1
+2026-08-05T17:15:01.791022Z	 1642 Close stmt	
+2026-08-05T17:15:01.800460Z	 1642 Prepare	select `data` from `tbltransientdata` where `name` = ? and `expires` > ? limit 1
+2026-08-05T17:15:01.800992Z	 1642 Execute	select `data` from `tbltransientdata` where `name` = 'TemplateCompatCache' and `expires` > 1785950101 limit 1
+2026-08-05T17:15:01.802040Z	 1642 Close stmt	
+2026-08-05T17:15:01.874978Z	 1642 Prepare	select exists(select * from `tbltransientdata` where `name` = ?) as `exists`
+2026-08-05T17:15:01.875366Z	 1642 Execute	select exists(select * from `tbltransientdata` where `name` = 'lastCronMemoryLimit') as `exists`
+2026-08-05T17:15:01.875896Z	 1642 Close stmt	
+2026-08-05T17:15:01.876289Z	 1642 Prepare	update `tbltransientdata` set `data` = ?, `expires` = ? where `name` = ?
+2026-08-05T17:15:01.876589Z	 1642 Execute	update `tbltransientdata` set `data` = '256', `expires` = 1786554901 where `name` = 'lastCronMemoryLimit'
+2026-08-05T17:15:01.882590Z	 1642 Close stmt	
+2026-08-05T17:15:01.905168Z	 1642 Prepare	select * from `tbltask`
+2026-08-05T17:15:01.905519Z	 1642 Execute	select * from `tbltask`
+2026-08-05T17:15:01.906568Z	 1642 Close stmt	
+2026-08-05T17:15:01.934125Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.934506Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.935473Z	 1642 Close stmt	
+2026-08-05T17:15:01.938462Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.938803Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.939338Z	 1642 Close stmt	
+2026-08-05T17:15:01.957257Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.957634Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.958245Z	 1642 Close stmt	
+2026-08-05T17:15:01.958723Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.959027Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.959568Z	 1642 Close stmt	
+2026-08-05T17:15:01.963140Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.963515Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.964100Z	 1642 Close stmt	
+2026-08-05T17:15:01.964564Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.964850Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.965336Z	 1642 Close stmt	
+2026-08-05T17:15:01.968707Z	 1642 Prepare	select * from `tbltask`
+2026-08-05T17:15:01.969018Z	 1642 Execute	select * from `tbltask`
+2026-08-05T17:15:01.969604Z	 1642 Close stmt	
+2026-08-05T17:15:01.971458Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.971718Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.972239Z	 1642 Close stmt	
+2026-08-05T17:15:01.972682Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.972946Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.973443Z	 1642 Close stmt	
+2026-08-05T17:15:01.976764Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.977088Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.977603Z	 1642 Close stmt	
+2026-08-05T17:15:01.978038Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.978293Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.978820Z	 1642 Close stmt	
+2026-08-05T17:15:01.982382Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.982691Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.983207Z	 1642 Close stmt	
+2026-08-05T17:15:01.983630Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.983943Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:01.984454Z	 1642 Close stmt	
+2026-08-05T17:15:01.988871Z	 1642 Prepare	select * from `tblconfiguration` where `tblconfiguration`.`setting` = ? limit 1
+2026-08-05T17:15:01.989280Z	 1642 Execute	select * from `tblconfiguration` where `tblconfiguration`.`setting` = 'lastCronInvocationTime' limit 1
+2026-08-05T17:15:01.989861Z	 1642 Close stmt	
+2026-08-05T17:15:01.990847Z	 1642 Prepare	update `tblconfiguration` set `value` = ?, `tblconfiguration`.`updated_at` = ? where `setting` = ?
+2026-08-05T17:15:01.991196Z	 1642 Execute	update `tblconfiguration` set `value` = '2026-08-06 00:15:01', `tblconfiguration`.`updated_at` = '2026-08-06 00:15:01' where `setting` = 'lastCronInvocationTime'
+2026-08-05T17:15:01.997637Z	 1642 Close stmt	
+2026-08-05T17:15:01.998185Z	 1642 Prepare	select * from `tblconfiguration` where `tblconfiguration`.`setting` = ? limit 1
+2026-08-05T17:15:01.998458Z	 1642 Execute	select * from `tblconfiguration` where `tblconfiguration`.`setting` = 'cronTimeZone' limit 1
+2026-08-05T17:15:01.998972Z	 1642 Close stmt	
+2026-08-05T17:15:02.001194Z	 1642 Prepare	select * from `tbltask`
+2026-08-05T17:15:02.001510Z	 1642 Execute	select * from `tbltask`
+2026-08-05T17:15:02.002110Z	 1642 Close stmt	
+2026-08-05T17:15:02.004266Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:02.004556Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:02.004983Z	 1642 Close stmt	
+2026-08-05T17:15:02.005509Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:02.005801Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:02.006307Z	 1642 Close stmt	
+2026-08-05T17:15:02.009603Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:02.009917Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:02.010350Z	 1642 Close stmt	
+2026-08-05T17:15:02.011135Z	 1642 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:02.011417Z	 1642 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:15:02.011881Z	 1642 Close stmt	
+2026-08-05T17:15:02.017231Z	 1642 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:15:02.017558Z	 1642 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:15:02.017804Z	 1642 Execute	select * from `tbltask_status` where (`task_id` = 9) limit 1
+2026-08-05T17:15:02.018537Z	 1642 Close stmt	
+2026-08-05T17:15:02.018899Z	 1642 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:15:02.019185Z	 1642 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:15:02.019423Z	 1642 Execute	select * from `tbltask_status` where (`task_id` = 19) limit 1
+2026-08-05T17:15:02.019836Z	 1642 Close stmt	
+2026-08-05T17:15:02.020311Z	 1642 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:15:02.020604Z	 1642 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:15:02.020865Z	 1642 Execute	select * from `tbltask_status` where (`task_id` = 9) limit 1
+2026-08-05T17:15:02.021322Z	 1642 Close stmt	
+2026-08-05T17:15:02.021711Z	 1642 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:15:02.022041Z	 1642 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:15:02.022331Z	 1642 Execute	select * from `tbltask_status` where (`task_id` = 19) limit 1
+2026-08-05T17:15:02.022872Z	 1642 Close stmt	
+2026-08-05T17:15:02.025508Z	 1642 Prepare	select count(*) as aggregate from `tblerrorlog`
+2026-08-05T17:15:02.025788Z	 1642 Execute	select count(*) as aggregate from `tblerrorlog`
+2026-08-05T17:15:02.027413Z	 1642 Close stmt	
+2026-08-05T17:15:02.027963Z	 1642 Prepare	delete from `tblerrorlog` where `created_at` < ?
+2026-08-05T17:15:02.028265Z	 1642 Execute	delete from `tblerrorlog` where `created_at` < '2026-07-30 00:15:02'
+2026-08-05T17:15:02.029878Z	 1642 Close stmt	
+2026-08-05T17:15:02.032231Z	 1642 Quit	
+2026-08-05T17:15:05.450992Z	 1643 Connect	root@localhost on  using Socket
+2026-08-05T17:15:05.452667Z	 1643 Quit	
+2026-08-05T17:15:15.497506Z	 1644 Connect	root@localhost on  using Socket
+2026-08-05T17:15:15.498997Z	 1644 Quit	
+2026-08-05T17:15:25.543305Z	 1645 Connect	root@localhost on  using Socket
+2026-08-05T17:15:25.544495Z	 1645 Quit	
+2026-08-05T17:15:35.595538Z	 1646 Connect	root@localhost on  using Socket
+2026-08-05T17:15:35.597964Z	 1646 Quit	
+2026-08-05T17:15:45.694715Z	 1647 Connect	root@localhost on  using Socket
+2026-08-05T17:15:45.701408Z	 1647 Quit	
+2026-08-05T17:15:55.772876Z	 1648 Connect	root@localhost on  using Socket
+2026-08-05T17:15:55.787940Z	 1648 Quit	
+2026-08-05T17:16:05.989831Z	 1649 Connect	root@localhost on  using Socket
+2026-08-05T17:16:05.998702Z	 1649 Quit	
+2026-08-05T17:16:16.060970Z	 1650 Connect	root@localhost on  using Socket
+2026-08-05T17:16:16.061875Z	 1650 Quit	
+2026-08-05T17:16:26.126014Z	 1651 Connect	root@localhost on  using Socket
+2026-08-05T17:16:26.126662Z	 1651 Quit	
+2026-08-05T17:16:36.188390Z	 1652 Connect	root@localhost on  using Socket
+2026-08-05T17:16:36.189251Z	 1652 Quit	
+2026-08-05T17:16:46.248586Z	 1653 Connect	root@localhost on  using Socket
+2026-08-05T17:16:46.249994Z	 1653 Quit	
+2026-08-05T17:16:56.291995Z	 1654 Connect	root@localhost on  using Socket
+2026-08-05T17:16:56.293204Z	 1654 Quit	
+2026-08-05T17:17:06.343543Z	 1655 Connect	root@localhost on  using Socket
+2026-08-05T17:17:06.344587Z	 1655 Quit	
+2026-08-05T17:17:16.405393Z	 1656 Connect	root@localhost on  using Socket
+2026-08-05T17:17:16.406841Z	 1656 Quit	
+2026-08-05T17:17:26.555909Z	 1657 Connect	root@localhost on  using Socket
+2026-08-05T17:17:26.557458Z	 1657 Quit	
+2026-08-05T17:17:36.726340Z	 1658 Connect	root@localhost on  using Socket
+2026-08-05T17:17:36.727030Z	 1658 Quit	
+2026-08-05T17:17:46.797618Z	 1659 Connect	root@localhost on  using Socket
+2026-08-05T17:17:46.804181Z	 1659 Quit	
+2026-08-05T17:17:56.878069Z	 1660 Connect	root@localhost on  using Socket
+2026-08-05T17:17:56.879111Z	 1660 Quit	
+2026-08-05T17:18:07.159317Z	 1661 Connect	root@localhost on  using Socket
+2026-08-05T17:18:07.161432Z	 1661 Quit	
+2026-08-05T17:18:17.255682Z	 1662 Connect	root@localhost on  using Socket
+2026-08-05T17:18:17.256518Z	 1662 Quit	
+2026-08-05T17:18:27.483789Z	 1663 Connect	root@localhost on  using Socket
+2026-08-05T17:18:27.512301Z	 1663 Quit	
+2026-08-05T17:18:37.822916Z	 1664 Connect	root@localhost on  using Socket
+2026-08-05T17:18:37.823981Z	 1664 Quit	
+2026-08-05T17:18:48.153938Z	 1665 Connect	root@localhost on  using Socket
+2026-08-05T17:18:48.285406Z	 1665 Quit	
+2026-08-05T17:18:58.287478Z	 1666 Connect	root@localhost on  using Socket
+2026-08-05T17:18:58.288367Z	 1666 Quit	
+2026-08-05T17:19:08.337922Z	 1667 Connect	root@localhost on  using Socket
+2026-08-05T17:19:08.338952Z	 1667 Quit	
+2026-08-05T17:19:19.298686Z	 1668 Connect	root@localhost on  using Socket
+2026-08-05T17:19:19.328298Z	 1668 Quit	
+2026-08-05T17:19:29.377720Z	 1669 Connect	root@localhost on  using Socket
+2026-08-05T17:19:29.390035Z	 1669 Quit	
+2026-08-05T17:19:39.529880Z	 1670 Connect	root@localhost on  using Socket
+2026-08-05T17:19:39.549166Z	 1670 Quit	
+2026-08-05T17:19:49.597345Z	 1671 Connect	root@localhost on  using Socket
+2026-08-05T17:19:49.598760Z	 1671 Quit	
+2026-08-05T17:19:59.643314Z	 1672 Connect	root@localhost on  using Socket
+2026-08-05T17:19:59.645623Z	 1672 Quit	
+2026-08-05T17:20:01.418552Z	 1673 Connect	whmcs@172.20.0.5 on whmcs using TCP/IP
+2026-08-05T17:20:01.427232Z	 1673 Query	use `whmcs`
+2026-08-05T17:20:01.436162Z	 1673 Prepare	set names 'utf8' collate 'utf8_unicode_ci'
+2026-08-05T17:20:01.436771Z	 1673 Execute	set names 'utf8' collate 'utf8_unicode_ci'
+2026-08-05T17:20:01.438527Z	 1673 Close stmt	
+2026-08-05T17:20:01.440061Z	 1673 Prepare	set session sql_mode=''
+2026-08-05T17:20:01.440356Z	 1673 Execute	set session sql_mode=''
+2026-08-05T17:20:01.441278Z	 1673 Close stmt	
+2026-08-05T17:20:01.461593Z	 1673 Prepare	select * from `tblconfiguration`
+2026-08-05T17:20:01.462001Z	 1673 Execute	select * from `tblconfiguration`
+2026-08-05T17:20:01.477646Z	 1673 Close stmt	
+2026-08-05T17:20:01.484396Z	 1673 Prepare	select * from `tblconfiguration` where `tblconfiguration`.`setting` = ? limit 1
+2026-08-05T17:20:01.485150Z	 1673 Execute	select * from `tblconfiguration` where `tblconfiguration`.`setting` = 'trustedProxyIps' limit 1
+2026-08-05T17:20:01.487444Z	 1673 Close stmt	
+2026-08-05T17:20:01.511649Z	 1673 Prepare	select `data` from `tbltransientdata` where `name` = ? and `expires` > ? limit 1
+2026-08-05T17:20:01.512104Z	 1673 Execute	select `data` from `tbltransientdata` where `name` = 'TemplateCompatCache' and `expires` > 1785950401 limit 1
+2026-08-05T17:20:01.517527Z	 1673 Close stmt	
+2026-08-05T17:20:01.678128Z	 1673 Prepare	select exists(select * from `tbltransientdata` where `name` = ?) as `exists`
+2026-08-05T17:20:01.678506Z	 1673 Execute	select exists(select * from `tbltransientdata` where `name` = 'lastCronMemoryLimit') as `exists`
+2026-08-05T17:20:01.679315Z	 1673 Close stmt	
+2026-08-05T17:20:01.680152Z	 1673 Prepare	update `tbltransientdata` set `data` = ?, `expires` = ? where `name` = ?
+2026-08-05T17:20:01.680564Z	 1673 Execute	update `tbltransientdata` set `data` = '256', `expires` = 1786555201 where `name` = 'lastCronMemoryLimit'
+2026-08-05T17:20:01.698438Z	 1673 Close stmt	
+2026-08-05T17:20:01.751923Z	 1673 Prepare	select * from `tbltask`
+2026-08-05T17:20:01.752291Z	 1673 Execute	select * from `tbltask`
+2026-08-05T17:20:01.753884Z	 1673 Close stmt	
+2026-08-05T17:20:01.787520Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.787834Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.789907Z	 1673 Close stmt	
+2026-08-05T17:20:01.792921Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.793239Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.793765Z	 1673 Close stmt	
+2026-08-05T17:20:01.807870Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.808214Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.808860Z	 1673 Close stmt	
+2026-08-05T17:20:01.809287Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.809594Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.810403Z	 1673 Close stmt	
+2026-08-05T17:20:01.813752Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.814024Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.814661Z	 1673 Close stmt	
+2026-08-05T17:20:01.815118Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.815421Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.815919Z	 1673 Close stmt	
+2026-08-05T17:20:01.819013Z	 1673 Prepare	select * from `tbltask`
+2026-08-05T17:20:01.819330Z	 1673 Execute	select * from `tbltask`
+2026-08-05T17:20:01.819882Z	 1673 Close stmt	
+2026-08-05T17:20:01.821803Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.822127Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.822748Z	 1673 Close stmt	
+2026-08-05T17:20:01.823218Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.823480Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.823929Z	 1673 Close stmt	
+2026-08-05T17:20:01.827423Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.827794Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.828321Z	 1673 Close stmt	
+2026-08-05T17:20:01.829189Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.829448Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.830003Z	 1673 Close stmt	
+2026-08-05T17:20:01.835597Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.835897Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.836373Z	 1673 Close stmt	
+2026-08-05T17:20:01.836994Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.837203Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.837574Z	 1673 Close stmt	
+2026-08-05T17:20:01.842562Z	 1673 Prepare	select * from `tblconfiguration` where `tblconfiguration`.`setting` = ? limit 1
+2026-08-05T17:20:01.842812Z	 1673 Execute	select * from `tblconfiguration` where `tblconfiguration`.`setting` = 'lastCronInvocationTime' limit 1
+2026-08-05T17:20:01.843386Z	 1673 Close stmt	
+2026-08-05T17:20:01.844403Z	 1673 Prepare	update `tblconfiguration` set `value` = ?, `tblconfiguration`.`updated_at` = ? where `setting` = ?
+2026-08-05T17:20:01.844943Z	 1673 Execute	update `tblconfiguration` set `value` = '2026-08-06 00:20:01', `tblconfiguration`.`updated_at` = '2026-08-06 00:20:01' where `setting` = 'lastCronInvocationTime'
+2026-08-05T17:20:01.851815Z	 1673 Close stmt	
+2026-08-05T17:20:01.852529Z	 1673 Prepare	select * from `tblconfiguration` where `tblconfiguration`.`setting` = ? limit 1
+2026-08-05T17:20:01.852718Z	 1673 Execute	select * from `tblconfiguration` where `tblconfiguration`.`setting` = 'cronTimeZone' limit 1
+2026-08-05T17:20:01.853075Z	 1673 Close stmt	
+2026-08-05T17:20:01.856713Z	 1673 Prepare	select * from `tbltask`
+2026-08-05T17:20:01.856909Z	 1673 Execute	select * from `tbltask`
+2026-08-05T17:20:01.857343Z	 1673 Close stmt	
+2026-08-05T17:20:01.859349Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.859522Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.859875Z	 1673 Close stmt	
+2026-08-05T17:20:01.860558Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.860705Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.861089Z	 1673 Close stmt	
+2026-08-05T17:20:01.865146Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.865402Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.865902Z	 1673 Close stmt	
+2026-08-05T17:20:01.866533Z	 1673 Prepare	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.866724Z	 1673 Execute	select * from `tbldomainpricing` order by `tbldomainpricing`.`order` asc, `tbldomainpricing`.`id` asc
+2026-08-05T17:20:01.867088Z	 1673 Close stmt	
+2026-08-05T17:20:01.871454Z	 1673 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:20:01.871733Z	 1673 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:20:01.871906Z	 1673 Execute	select * from `tbltask_status` where (`task_id` = 9) limit 1
+2026-08-05T17:20:01.872594Z	 1673 Close stmt	
+2026-08-05T17:20:01.873063Z	 1673 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:20:01.873242Z	 1673 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:20:01.873364Z	 1673 Execute	select * from `tbltask_status` where (`task_id` = 19) limit 1
+2026-08-05T17:20:01.873654Z	 1673 Close stmt	
+2026-08-05T17:20:01.874188Z	 1673 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:20:01.874361Z	 1673 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:20:01.874479Z	 1673 Execute	select * from `tbltask_status` where (`task_id` = 9) limit 1
+2026-08-05T17:20:01.874775Z	 1673 Close stmt	
+2026-08-05T17:20:01.875214Z	 1673 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:20:01.875375Z	 1673 Prepare	select * from `tbltask_status` where (`task_id` = ?) limit 1
+2026-08-05T17:20:01.875497Z	 1673 Execute	select * from `tbltask_status` where (`task_id` = 19) limit 1
+2026-08-05T17:20:01.875889Z	 1673 Close stmt	
+2026-08-05T17:20:01.879046Z	 1673 Prepare	select count(*) as aggregate from `tblerrorlog`
+2026-08-05T17:20:01.879238Z	 1673 Execute	select count(*) as aggregate from `tblerrorlog`
+2026-08-05T17:20:01.886750Z	 1673 Close stmt	
+2026-08-05T17:20:01.887607Z	 1673 Prepare	delete from `tblerrorlog` where `created_at` < ?
+2026-08-05T17:20:01.887837Z	 1673 Execute	delete from `tblerrorlog` where `created_at` < '2026-07-30 00:20:01'
+2026-08-05T17:20:01.889186Z	 1673 Close stmt	
+2026-08-05T17:20:01.891179Z	 1673 Quit	
+2026-08-05T17:20:09.698976Z	 1674 Connect	root@localhost on  using Socket
+2026-08-05T17:20:09.699904Z	 1674 Quit	
+2026-08-05T17:20:18.621061Z	 1675 Connect	root@172.20.0.2 on  using TCP/IP
+2026-08-05T17:20:18.625142Z	 1675 Query	SELECT @@version, @@version_comment
+2026-08-05T17:20:18.628658Z	 1675 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
+2026-08-05T17:20:18.629576Z	 1675 Query	SET lc_messages = 'en_US'
+2026-08-05T17:20:18.639899Z	 1676 Connect	root@172.20.0.2 on  using TCP/IP
+2026-08-05T17:20:18.644446Z	 1676 Query	SHOW TABLES FROM `phpmyadmin`
+2026-08-05T17:20:18.652918Z	 1676 Query	SHOW TABLES FROM `whmcs`
+2026-08-05T17:20:18.702842Z	 1675 Query	SET collation_connection = 'utf8mb4_unicode_ci'
+2026-08-05T17:20:18.703762Z	 1676 Query	SHOW TABLES FROM `phpmyadmin`
+2026-08-05T17:20:18.704962Z	 1676 Query	SHOW TABLES FROM `whmcs`
+2026-08-05T17:20:18.719188Z	 1675 Query	SHOW TABLES FROM `whmcs`
+2026-08-05T17:20:18.734541Z	 1675 Query	SELECT 1 FROM mysql.user LIMIT 1
+2026-08-05T17:20:18.737333Z	 1675 Query	SELECT @@collation_server
+2026-08-05T17:20:18.738144Z	 1675 Query	SELECT CURRENT_USER()
+2026-08-05T17:20:18.743338Z	 1675 Query	SELECT 1 FROM (SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`COLUMN_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`TABLE_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`SCHEMA_PRIVILEGES` UNION SELECT `GRANTEE`, `IS_GRANTABLE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES`) t WHERE `IS_GRANTABLE` = 'YES' AND '''root''@''%''' LIKE `GRANTEE`  UNION SELECT 1 FROM mysql.user WHERE `create_user_priv` = 'Y' COLLATE utf8mb4_unicode_ci AND 'root' LIKE `User` AND '' LIKE `Host` LIMIT 1
+2026-08-05T17:20:18.758566Z	 1675 Query	SELECT `PRIVILEGE_TYPE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES` WHERE GRANTEE='''root''@''%''' AND PRIVILEGE_TYPE='EVENT'
+2026-08-05T17:20:18.760433Z	 1675 Query	SELECT `PRIVILEGE_TYPE` FROM `INFORMATION_SCHEMA`.`USER_PRIVILEGES` WHERE GRANTEE='''root''@''%''' AND PRIVILEGE_TYPE='TRIGGER'
+2026-08-05T17:20:18.767310Z	 1676 Quit	
+2026-08-05T17:20:18.767375Z	 1675 Quit	
+2026-08-05T17:20:19.761845Z	 1677 Connect	root@localhost on  using Socket
+2026-08-05T17:20:19.763093Z	 1677 Quit	
+2026-08-05T17:20:29.814895Z	 1678 Connect	root@localhost on  using Socket
+2026-08-05T17:20:29.815821Z	 1678 Quit	
+2026-08-05T17:20:39.943768Z	 1679 Connect	root@localhost on  using Socket
+2026-08-05T17:20:39.947153Z	 1679 Quit	
+2026-08-05T17:20:49.989484Z	 1680 Connect	root@localhost on  using Socket
+2026-08-05T17:20:49.990831Z	 1680 Quit	
+2026-08-05T17:21:00.033744Z	 1681 Connect	root@localhost on  using Socket
+2026-08-05T17:21:00.034865Z	 1681 Quit	
+2026-08-05T17:21:10.089581Z	 1682 Connect	root@localhost on  using Socket
+2026-08-05T17:21:10.091001Z	 1682 Quit	
+2026-08-05T17:21:20.147408Z	 1683 Connect	root@localhost on  using Socket
+2026-08-05T17:21:20.148777Z	 1683 Quit	
+2026-08-05T17:21:30.210883Z	 1684 Connect	root@localhost on  using Socket
+2026-08-05T17:21:30.212696Z	 1684 Quit	
+2026-08-05T17:21:40.260046Z	 1685 Connect	root@localhost on  using Socket
+2026-08-05T17:21:40.263057Z	 1685 Quit	
+2026-08-05T17:21:50.317279Z	 1686 Connect	root@localhost on  using Socket
+2026-08-05T17:21:50.319883Z	 1686 Quit	
+2026-08-05T17:22:00.375697Z	 1687 Connect	root@localhost on  using Socket
+2026-08-05T17:22:00.377239Z	 1687 Quit	
+2026-08-05T17:22:10.476519Z	 1688 Connect	root@localhost on  using Socket
+2026-08-05T17:22:10.483960Z	 1688 Quit	
+2026-08-05T17:22:20.537787Z	 1689 Connect	root@localhost on  using Socket
+2026-08-05T17:22:20.538853Z	 1689 Quit	
+2026-08-05T17:22:30.583217Z	 1690 Connect	root@localhost on  using Socket
+2026-08-05T17:22:30.583973Z	 1690 Quit	
+2026-08-05T17:22:40.674235Z	 1691 Connect	root@localhost on  using Socket
+2026-08-05T17:22:40.682594Z	 1691 Quit	
+2026-08-05T17:22:50.813102Z	 1692 Connect	root@localhost on  using Socket
+2026-08-05T17:22:50.817443Z	 1692 Quit	
+2026-08-05T17:23:00.871090Z	 1693 Connect	root@localhost on  using Socket
+2026-08-05T17:23:00.872023Z	 1693 Quit	
+2026-08-05T17:23:10.970923Z	 1694 Connect	root@localhost on  using Socket
+2026-08-05T17:23:10.973983Z	 1694 Quit	
+2026-08-05T17:23:21.051461Z	 1695 Connect	root@localhost on  using Socket
+2026-08-05T17:23:21.052417Z	 1695 Quit	
+2026-08-05T17:23:31.116045Z	 1696 Connect	root@localhost on  using Socket
+2026-08-05T17:23:31.117442Z	 1696 Quit	
+2026-08-05T17:23:41.161487Z	 1697 Connect	root@localhost on  using Socket
+2026-08-05T17:23:41.162663Z	 1697 Quit	

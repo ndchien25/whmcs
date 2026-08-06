@@ -4,19 +4,30 @@ services:
   # ===========================================
   whmcs:
     build:
-      context: ./docker
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: docker/Dockerfile
     container_name: whmcs-app
     restart: unless-stopped
     ports:
       - "8080:80"
     volumes:
-      - ./:/var/www/html
+      - whmcs_templates_c:/var/www/html/templates_c
+      - whmcs_attachments:/var/www/html/attachments
+      - whmcs_downloads:/var/www/html/downloads
+      - mitmproxy_certs:/mitmproxy-certs:ro
     environment:
       - APACHE_DOCUMENT_ROOT=/var/www/html
+      - http_proxy=http://mitmproxy:8888
+      - https_proxy=http://mitmproxy:8888
+      - HTTP_PROXY=http://mitmproxy:8888
+      - HTTPS_PROXY=http://mitmproxy:8888
+      - no_proxy=db,localhost,127.0.0.1,whmcs-db,mitmproxy
+      - NO_PROXY=db,localhost,127.0.0.1,whmcs-db,mitmproxy
     depends_on:
       db:
         condition: service_healthy
+      mitmproxy:
+        condition: service_started
     networks:
       - whmcs-network
 
@@ -37,10 +48,14 @@ services:
     volumes:
       - whmcs_db_data:/var/lib/mysql
       - ./docker/mysql.cnf:/etc/mysql/conf.d/whmcs.cnf
+      - ./logs/mysql:/var/log/mysql
     command: >
       --default-authentication-plugin=mysql_native_password
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_unicode_ci
+      --general-log=ON
+      --general-log-file=/var/log/mysql/general.log
+      --log-output=FILE
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pwhmcs_root_pass"]
       interval: 10s
@@ -85,8 +100,40 @@ services:
     networks:
       - whmcs-network
 
+  # ===========================================
+  # mitmproxy (API Traffic Logger)
+  # ===========================================
+  mitmproxy:
+    image: mitmproxy/mitmproxy:latest
+    container_name: whmcs-mitmproxy
+    restart: unless-stopped
+    command: >
+      mitmdump
+      --set block_global=false
+      --listen-host 0.0.0.0
+      --listen-port 8888
+      --set ssl_insecure=true
+      -s /scripts/mitmproxy-logger.py
+    ports:
+      - "8082:8888"
+    volumes:
+      - ./docker/mitmproxy-logger.py:/scripts/mitmproxy-logger.py:ro
+      - ./docker/mitmproxy-overrides:/etc/mitmproxy/enom-overrides:ro
+      - ./logs:/var/log/mitmproxy
+      - mitmproxy_certs:/home/mitmproxy/.mitmproxy
+    networks:
+      - whmcs-network
+
 volumes:
   whmcs_db_data:
+    driver: local
+  whmcs_templates_c:
+    driver: local
+  whmcs_attachments:
+    driver: local
+  whmcs_downloads:
+    driver: local
+  mitmproxy_certs:
     driver: local
 
 networks:

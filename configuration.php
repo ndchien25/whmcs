@@ -1,5 +1,5 @@
 <?php
-$license = '123';
+$license = 'WHMCS-4210314fa71904bcb708';
 $db_host = 'db';
 $db_port = '3306';
 $db_username = 'whmcs';

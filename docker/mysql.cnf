@@ -20,6 +20,11 @@ slow_query_log = 1
 slow_query_log_file = /var/log/mysql/slow.log
 long_query_time = 2
 
+# General query log
+general_log = 1
+general_log_file = /var/log/mysql/general.log
+log_output = FILE
+
 # SQL mode compatible with WHMCS
 sql_mode = "STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
 

@@ -1,6 +1,37 @@
 #!/bin/bash
 set -e
 
+# ===========================================
+# Install mitmproxy CA certificate for HTTPS inspection
+# ===========================================
+install_mitmproxy_ca() {
+    echo "[entrypoint] Waiting for mitmproxy CA certificate..."
+    local cert_path="/mitmproxy-certs/mitmproxy-ca-cert.pem"
+    local max_attempts=30
+    local attempt=0
+
+    while [ $attempt -lt $max_attempts ]; do
+        if [ -f "$cert_path" ]; then
+            echo "[entrypoint] Found mitmproxy CA certificate"
+            cp "$cert_path" /usr/local/share/ca-certificates/mitmproxy-ca.crt
+            update-ca-certificates
+            # Also set curl CA bundle for PHP
+            echo "curl.cainfo=/etc/ssl/certs/ca-certificates.crt" > /usr/local/etc/php/conf.d/curl-ca.ini
+            echo "[entrypoint] mitmproxy CA certificate installed successfully"
+            return 0
+        fi
+        attempt=$((attempt + 1))
+        sleep 1
+    done
+
+    echo "[entrypoint] WARNING: Could not find mitmproxy CA cert after ${max_attempts}s"
+    echo "[entrypoint] HTTPS traffic logging may not work properly"
+    return 0
+}
+
+# Try to install mitmproxy CA cert (non-blocking on failure)
+install_mitmproxy_ca &
+
 # Fix permissions for WHMCS writable directories
 WRITABLE_DIRS=(
     /var/www/html/templates_c
